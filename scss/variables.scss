@@ -1,0 +1,397 @@
+$background: linear-gradient(45deg, #027402, rgb(255, 255, 255));
+$color: #0f9b0f;
+@mixin btn-prm {
+  background: #3498db !important;
+  border-color: #0f9b0f;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #0f9b0f inset, 0 0 0 0 #0f9b0f;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+@mixin nav-brand {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 30px;
+  color: #45b649 !important;
+}
+
+@mixin column {
+  display: flex;
+  flex: 1 1 auto;
+}
+@mixin players {
+  font-weight: bold;
+  font-family: "Lora", serif;
+  height: 25px;
+  width: 70px;
+  background: #0f9b0f;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+  transform: skew(170deg);
+}
+@mixin breadcrumb-link {
+  color: #027402;
+  text-decoration: none;
+  &:hover {
+    color: #ffffff;
+  }
+}
+@mixin media-text-bg {
+  @media (max-width: 1199px) {
+    background: none;
+    font-size: 20px;
+    top: 200px;
+    left: 0;
+    background: #000;
+    opacity: 0.7;
+  }
+  @media (max-width: 1025px) {
+    background: none;
+    font-size: 20px;
+    top: 200px;
+    left: 0;
+    background: #000;
+    opacity: 0.7;
+  }
+  @media (max-width: 991px) {
+    background: none;
+    font-size: 18px;
+    top: 200px;
+    left: 0;
+    background: #000;
+    opacity: 0.7;
+  }
+  @media (max-width: 767px) {
+    background: none;
+    font-size: 18px;
+    top: 100px;
+    left: 0;
+    background: #000;
+    opacity: 0.7;
+    margin-right: 5px;
+  }
+  @media (max-width: 575px) {
+    background: none;
+    font-size: 16px;
+    top: 100px;
+    left: 0;
+    background: #000;
+    opacity: 0.7;
+  }
+  @media (max-width: 425px) {
+    top: 80px;
+    background: none;
+    font-size: 16px;
+    background: #000;
+    opacity: 0.7;
+  }
+  @media (max-width: 379px) {
+    top: 70px;
+    background: none;
+    font-size: 12px;
+    background: #000;
+    opacity: 0.7;
+  }
+}
+@mixin nav-light {
+  font-size: 1rem;
+  line-height: 1rem;
+  display: block;
+  font-family: sans-serif;
+  font-size: 1 rem;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  z-index: 1;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 1.25rem;
+    left: 1.25rem;
+    background-color: #0f9b0f;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #fff;
+
+    &:after {
+      right: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+@mixin title {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 2.5rem;
+  color: black;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  &:hover {
+    color: #027402;
+  }
+  &:before,
+  a:after {
+    content: "";
+    background: #e74c3c;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  &:before {
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    top: 100%;
+    right: 0;
+  }
+  &:hover:before,
+  a:hover:after {
+    width: 100%;
+  }
+}
+@mixin foto-title {
+  padding: 6px;
+  background: #45b649;
+  text-shadow: 5px -1px 2px rgba(237, 237, 237, 1);
+}
+
+@mixin footer {
+  .iconss {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    &:hover {
+      fill: #0f9b0f;
+    }
+  }
+  .insta {
+    fill: rgb(230, 229, 229);
+    fill-opacity: 0.5;
+    margin-left: 30px;
+  }
+  .twit {
+    fill: rgb(230, 229, 229);
+    fill-opacity: 0.5;
+    margin-left: 15px;
+  }
+  .vk {
+    fill: rgb(230, 229, 229);
+    fill-opacity: 0.5;
+  }
+  .yt {
+    fill: rgb(230, 229, 229);
+    fill-opacity: 0.5;
+    margin-left: 10px;
+  }
+}
+@mixin title-footer {
+  background: #fff;
+  border-radius: 15px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+@mixin footer-social {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1rem;
+  color: #fff;
+}
+@mixin footer-menu {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 1.3rem;
+  &:hover {
+    color: bisque;
+  }
+}
+@mixin logotext {
+  font-family: "Lora", serif;
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 4px 1px 8px #14ff0a;
+}
+
+@mixin phone-footer {
+  height: 30px;
+  width: 20px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  fill: #fff;
+}
+@mixin mail-footer {
+  height: 30px;
+  width: 20px;
+  fill: #fff;
+  padding-bottom: 4px;
+}
+@mixin responsiv {
+  nav.navbar-light .navbar-nav .nav-link {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: block;
+    font-family: sans-serif;
+    font-size: 1 rem;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+  button.navbar-toggler,
+  button.navbar-toggler.collapsed {
+    margin-right: 25px;
+  }
+  li.nav-item {
+    background: #84f584;
+    margin-top: 5px;
+  }
+  .header-top {
+    display: block !important;
+  }
+  .hiddenLogo {
+    display: inline-block;
+  }
+  .hidden {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+}
+@mixin responsiv_two {
+  nav.navbar-light .navbar-nav .nav-link {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: block;
+    font-family: sans-serif;
+    font-size: 1 rem;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+  button.navbar-toggler,
+  button.navbar-toggler.collapsed {
+    margin-right: 25px;
+  }
+  li.nav-item {
+    background: #84f584;
+    margin-top: 5px;
+  }
+  .header-top {
+    display: block !important;
+  }
+  .hiddenLogo {
+    display: inline-block;
+  }
+  .hidden {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+@mixin responsiv_three {
+  nav.navbar-light .navbar-nav .nav-link {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: block;
+    font-family: sans-serif;
+    font-size: 1 rem;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+  button.navbar-toggler,
+  button.navbar-toggler.collapsed {
+    margin-right: 20px;
+  }
+  li.nav-item {
+    background: #84f584;
+    margin-top: 5px;
+  }
+  .header-top {
+    display: block !important;
+  }
+  .hiddenLogo {
+    display: inline-block;
+  }
+  .hidden {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+@mixin responsiv_four {
+  nav.navbar-light .navbar-nav .nav-link {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: block;
+    font-family: sans-serif;
+    font-size: 1 rem;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: bold;
+  }
+  li.nav-item {
+    background: #84f584;
+    margin-top: 5px;
+  }
+  .header-top {
+    display: block !important;
+  }
+  .hiddenLogo {
+    display: inline-block;
+  }
+  .hidden {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+}

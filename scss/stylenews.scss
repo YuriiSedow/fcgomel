@@ -1,0 +1,256 @@
+@import "reset.scss";
+@import "variables.scss";
+
+body {
+  background: $background;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    &:hover {
+      color: black;
+    }
+  }
+}
+.responsivHeader {
+  padding: 0 !important;
+}
+.icons {
+  width: 30px;
+  height: 30px;
+  &:hover {
+    fill: #0f9b0f !important;
+  }
+}
+.header-top {
+  display: flex;
+  justify-content: space-around;
+}
+.hiddenLogo {
+  display: none;
+}
+.container-fluid {
+  margin: 0 !important;
+}
+.title {
+  color: #0f9b0f;
+  font-family: "Fredericka the Great", cursive;
+}
+
+.hover-text-one {
+  padding-top: 3.12rem;
+  background-image: url(/img/image.jfif);
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
+a.btn.btn-primary,
+button.btn.btn-primary {
+  @include btn-prm;
+  &:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  }
+}
+a.navbar-brand {
+  @include nav-brand;
+}
+nav.navbar-light .navbar-nav .nav-link {
+  @include nav-light;
+}
+
+a.dropdown-item {
+  color: green !important;
+  text-decoration: none !important;
+}
+li.nav-item.dropdown {
+  position: relative;
+}
+ul.dropdown-menu {
+  display: none;
+  margin-bottom: -350px;
+}
+li.nav-item.dropdown:hover {
+  ul.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 34px;
+    z-index: 9999;
+  }
+}
+.img-social {
+  transition: all 1s ease-out;
+}
+.img-social:hover {
+  transform: scale(1.3);
+}
+.bot-header {
+  border-radius: 15px 15px;
+}
+@media (max-width: 320px) {
+  @include responsiv_four;
+}
+@media (max-width: 375px) {
+  @include responsiv_three;
+}
+@media (max-width: 425px) {
+  @include responsiv_two;
+}
+@media (max-width: 768px) {
+  @include responsiv;
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.breadcrumb-link {
+  @include breadcrumb-link;
+}
+
+div[class*="column"] {
+  @include column;
+}
+.video-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0f9b0f;
+  width: 80px;
+  padding-left: 10px;
+  color: #fff;
+  &::before {
+    content: url(../img/videospan.png);
+    padding-right: 3px;
+  }
+}
+.photo-info {
+  position: absolute;
+  padding-left: 10px;
+  top: 10;
+  left: 0;
+  margin-top: 10px;
+  background: #0f9b0f;
+  width: 80px;
+  color: #fff;
+  &::before {
+    content: url(../img/photospan.png);
+    vertical-align: middle;
+    padding-right: 5px;
+  }
+}
+.header {
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: all 1s ease;
+}
+.header.out {
+  transform: translateY(-100%);
+}
+.title-news {
+  text-shadow: 5px 1px 2px rgba(0, 0, 0, 1);
+}
+.photo-info-one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0f9b0f;
+  width: 80px;
+  padding-left: 10px;
+  color: #fff;
+  &::before {
+    content: url(../img/photospan.png);
+    vertical-align: middle;
+    padding-right: 5px;
+  }
+}
+footer {
+  @include footer;
+}
+.phone-footer {
+  @include phone-footer;
+}
+.mail-footer {
+  @include mail-footer;
+}
+.footer-color {
+  background-color: rgb(66, 63, 66);
+}
+@media (max-width: 1024px) {
+  .colgomel {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 425px) {
+  .colform {
+    textarea {
+      width: 97% !important;
+    }
+    input {
+      width: 97% !important;
+    }
+  }
+}
+.form-label {
+  color: #fff;
+}
+.responsivHeader {
+  padding: 0 !important;
+}
+.title-footer {
+  @include title-footer;
+}
+@media (max-width: 425px) {
+  .title-footer {
+    margin-left: 10px;
+  }
+  .colform {
+    margin-bottom: 10px;
+    margin-left: 6px;
+  }
+  div.col-sm.colform {
+    button.btn.btn-primary {
+      margin-left: 100px;
+    }
+  }
+}
+.footer-social {
+  @include footer-social;
+}
+.logotext {
+  @include logotext;
+}
+.footer-menu {
+  @include footer-menu;
+}
+.text-contact {
+  font-family: "Libre Baskerville", serif;
+  color: $background;
+  font-size: 1rem;
+}
+.phone {
+  &:hover {
+    color: #3498db;
+  }
+}
+.mail {
+  &:hover {
+    color: #3498db;
+  }
+}
